@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>
+        customer
+    </title>
+
+</head>
+
+<body>
+    <h1>Welcome user</h1>
+    <p>customer Name:<span id="name"></span></p>
+    <p>balance:<span id="bal"></span></p>
+    <p>loan_amount:<span id="loan_amount"></span></p>
+
+</body>
+<script>
+    const customer = [{
+        user: 123,
+        name: "Lotlapally satish",
+        password: 123,
+        balance: 10000,
+        loan_amount: 0
+
+    }, {
+        user: 1234,
+        name: "Loltlapally manohar",
+        password: 1234,
+        balance: 10000,
+        loan_amount: 5000
+    }, {
+        user: 12345,
+        name: "Lotlpalaly prasad",
+        password: 12345,
+        balance: 10000,
+        loan_amount: 10000
+    }, ];
+    var logged_user = localStorage.getItem("user");
+    for (i = 0; i <= customer.length; i++) {
+        if (customer[i].user == logged_user) {
+            var name = customer[i].name;
+            var bal = customer[i].balance;
+            var loan_amount = customer[i].loan_amount;
+
+            document.getElementById('name').innerHTML = name;
+            document.getElementById('bal').innerHTML = bal;
+            document.getElementById('loan_amount').innerHTML = loan_amount;
+
+
+        }
+    }
+</script>
+
+</html>

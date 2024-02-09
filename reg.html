@@ -1,0 +1,101 @@
+<htm>
+
+    <head>
+        <title>register</title>
+        <script>
+            function reg() {
+                var first = document.getElementById("first").value;
+                var last = document.getElementById("last").value;
+                var mail = document.getElementById("mail").value;
+                var phone = document.getElementById("phone").value;
+
+                var pass = document.getElementById("pass").value;
+
+                var confirm = document.getElementById("confirm").value;
+                var date = document.getElementById("date").value;
+
+
+                var address = document.getElementById("address").value;
+
+                if (first == "") {
+                    alert("pls enter first name");
+                    return false;
+                }
+                if (last == "") {
+                    alert("pls enter last name");
+                    return false;
+                }
+                if (mail == "") {
+                    alert("pls enter email");
+                    return false;
+                }
+                if (phone == "") {
+                    alert("pls enter phone");
+                    return false;
+                }
+                if (pass == "") {
+                    alert("pls enter password");
+                    return false;
+                }
+                if (pass != confirm) {
+                    alert("password mismath");
+                    return false;
+                }
+                if (date == "") {
+                    alert("pls enter your date of birth")
+                    return false;
+                }
+
+                if (address == "") {
+                    alert("pls enter your address")
+                    return false;
+                }
+
+
+
+            }
+        </script>
+        <style>
+            h1 {
+                text-align: center;
+                color: blue;
+            }
+            
+            div {
+                color: black;
+            }
+            
+            body {
+                background-color: aqua;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Bank Account Regestration Form</h1>
+        <div>
+            first name:<input type="text" name="" value="" id="first">
+            <br><br> last name:<input type="text" name="" value="" id="last">
+            <br><br> phone number:<input type="tel" id="phone">
+            <br><br> e-mail: <input type="email" id="mail"><br>
+            <br> password:
+            <input type="password" name="" value="" id="pass"><br>
+            <br> re-enter password:<input type="password" name="" value="" id="confirm"><br>
+            <br> date of birth:<input type="date" name="" value="" id="date">
+            <br>
+            <br> gender: <br><input type="radio" name="gender" value="male" id="male">
+            <label for="male">male</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">female</label>
+            <br><br> address:<br>
+
+            <textarea rows="8" columns="10" name="address" value="" id="address"></textarea>
+            <br><br>
+            <input type="submit" name="submit" onclick="reg()">
+            <input type="submit" value="Reset"><br>
+            <br>
+            <a href="index.html">home</a>
+        </div>
+
+    </body>
+</htm>
